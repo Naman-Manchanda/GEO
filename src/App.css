@@ -1,0 +1,17 @@
+:root {
+   
+    --primary-color: #101010;
+    --primary-color-placeholder: #989898;
+    --secondary-color: #6ECFDC;
+    --primary-text-color: #ffffff ;
+    --line-color: #585959;
+    --header-height:70px;
+  }
+
+  body {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+  }
+  * {
+    box-sizing: border-box;
+}

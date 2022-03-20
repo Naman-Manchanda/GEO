@@ -1,3 +1,5 @@
+@import "../App.css";
+
 .sidebarItem{
     display: flex;
     padding: 10px 0;

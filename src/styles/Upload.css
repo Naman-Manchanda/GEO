@@ -1,3 +1,5 @@
+@import "../App.css";
+
 .upload{
     display: flex;
     align-items: center;
@@ -17,4 +19,14 @@
 
 .upload__container>p{
     margin-left: 14px;
+}
+.UploadLogo{
+     position: fixed;
+width: 59px;
+height: 59px;
+right: 4%;
+bottom: 10%;
+}
+#file-input{
+    display: none;
 }

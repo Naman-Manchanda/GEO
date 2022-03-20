@@ -10,17 +10,18 @@ import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 
 const index = () => {
   return (
+    <>
     <div className='sideBar'>
-        <Upload/>
+        
         <div className="sideBar__itemsContainer">
             <Sidebaritem arrow icon={(<InsertDriveFileIcon/>)} label={'My Drive'}/>
             <Sidebaritem icon={(<QueryBuilderIcon fontSize='large'/>)} label={'Recent'}/>
             <Sidebaritem icon={(<StarBorderIcon fontSize='large'/>)} label={'Starred'}/>
             <Sidebaritem icon={(<DeleteOutlineIcon/>)} label={'Bin'}/>
-            <hr/>
-
         </div>
     </div>
+    <Upload/>
+</>
   )
 }
 

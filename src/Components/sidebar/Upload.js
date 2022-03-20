@@ -1,18 +1,20 @@
 import React  from 'react'
-import AddIcon from '@material-ui/icons/Add';
-import '../../styles/Upload.css'
 
+import '../../styles/Upload.css'
+import UploadLogo from '../../Assets/UploadLogo.svg';
 const Upload = () => {
 
   return (
-    <div className='upload'>
-        <div className="upload__container">
-            <AddIcon fontSize='large'/>
-            <p>Upload
-              <input type="file" name="" id="" />
-            </p>
-        </div>
-    </div>
+    <>
+    
+   <div class="image-upload">
+  <label for="file-input">
+    <img src={UploadLogo} className="UploadLogo"/>
+  </label>
+
+   <input id="file-input" type="file" /> 
+</div>
+  </>
   )
 }
 

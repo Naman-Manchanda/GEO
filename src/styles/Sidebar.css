@@ -1,8 +1,24 @@
-.sideBar{
-    width: 15%;
-    height: 10vh;
+@import "../App.css";
+
+:root {
+   
+    --primary-color: #101010;
+    --primary-color-placeholder: #989898;
+    --secondary-color: #6ECFDC;
+    --primary-text-color: #ffffff ;
+    --line-color: #585959;
+  }
+.sideBar{ 
+    width: 20%;
+    height: calc(100vh - var(--header-height));
     margin-right: 5px;
+    border-right: 1px solid var(--line-color);
+}
+
+.sideBar__itemsContainer{
+   padding: 20px 0px ;
+   border-bottom: 1px solid var(--line-color);
 }
 hr{
-    background-color: rgb(197,197,197);
+    background-color: var(--line-color);
 }

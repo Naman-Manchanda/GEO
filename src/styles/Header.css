@@ -61,7 +61,7 @@
 }
 .header__searchBar>input:focus{
     outline: none;
-    color: black;
+    color: white;
 }
 .header__searchBar>input::placeholder{
 color:var(--primary-color-placeholder);

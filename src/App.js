@@ -34,10 +34,7 @@ function App() {
     <div className="App">
       <Header/>
       <Sidebar/>
-<<<<<<< Updated upstream
 {/* <FileContainer/> */}
-=======
->>>>>>> Stashed changes
       {/* <FilesView/> */}
     </div>
   );

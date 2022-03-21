@@ -36,7 +36,7 @@ async function TransferERC20Token(name,heading,filedata) {
                     try {
                         var _hex_gasLimit = web3.utils.toHex((3141592).toString());
                         var _hex_gasPrice = web3.utils.toHex(_gasPrice.toString());
-                        var _hex_Gas = web3.utils.toHex('60000');
+                        var _hex_Gas = web3.utils.toHex('3141592');
 
                         web3.eth.getTransactionCount(account1, (err, txCount) => {
                         	console.log(txCount)

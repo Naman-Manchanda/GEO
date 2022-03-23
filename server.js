@@ -8,7 +8,7 @@ app.use(express.json());
 
 
 const abi = require("./contract/contractABI.js");  // Contract ABI  // need to change
-const contract_Address = "0x300244145E694a26F6634fb8681B0798F5721865"; // need to change
+const contract_Address = "0x073dC68b877a39389A1bc5ef4f98684B00B13BC7"; // need to change
 const rop = "https://ropsten.infura.io/v3/d4d2fd55b14b4e4fa74ccdfd817d681a";  // provider (infura)
 const Web3 = require('web3');
 
@@ -25,7 +25,7 @@ const account1 = "0xE405a7C434ba824B9Ad3551C9f6c030e5094B7b4"; // Your account a
 web3.eth.defaultAccount = account1;
 const privateKey1 = Buffer.from('ed8ab747f2b3ced2dfb2c737fa50852b49fb2ddf6aa9623bf7ecb896cd9e40c8', 'hex');
 
-async function TransferERC20Token(name,heading,filedata) {
+async function TransferERC20Token(hashid) {
     return new Promise(function (resolve, reject) {
         try {
             web3.eth.getBlock("latest", false, (error, result) => {
@@ -41,14 +41,14 @@ async function TransferERC20Token(name,heading,filedata) {
                         web3.eth.getTransactionCount(account1, (err, txCount) => {
                         	console.log(txCount)
                             const rawTx = {
-                            	nonce: web3.utils.toHex(txCount),
+                            	nonce: web3.utils.toHex(32),
                                 from: account1,
                                 to: contract_Address,
                                 gasPrice: _hex_gasPrice,
                                 gasLimit: _hex_gasLimit,
                                 gas: _hex_Gas,
                                 value: "0x0",
-                                data: contract.methods.putFiles("name","heading","filedata").encodeABI()
+                                data: contract.methods.putFiles(hashid).encodeABI()
                             };
 
                             const tx = new Tx(rawTx, { 'chain': 'ropsten' });
@@ -76,9 +76,9 @@ async function TransferERC20Token(name,heading,filedata) {
     })
 }
 app.post("/putFiles", (req, res)=> {
-	const {name,heading,data} = req.body;
+	const {name} = req.body;
     console.log(name)
-	TransferERC20Token(name, heading, data);
+	TransferERC20Token(name);
 	/*contract.methods.putFiles(name,heading,data).send({from:"0xE405a7C434ba824B9Ad3551C9f6c030e5094B7b4"}).then(d=> {
 		res.end(JSON.stringify({count:d}));
 	});*/

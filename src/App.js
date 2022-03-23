@@ -7,9 +7,7 @@ import Sidebar from './Components/sidebar'
 
 function Test() {
   let temp = {
-    name:"n",
-    heading:"h",
-    data:"d"
+    name:"QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"
   };
   fetch('http://localhost:8080/putFiles', {
     method: "POST",
@@ -26,7 +24,17 @@ function Test() {
     <span>a</span>
   );*/
 }
-Test();
+function Test1() {
+  fetch('http://localhost:8080/getFiles').then(res=> {
+    res.json().then(d=>{
+      console.log(d)
+    });
+  });
+  /*return (
+    <span>a</span>
+  );*/
+}
+Test1();
 
 function App() {
   

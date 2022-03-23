@@ -1,3 +1,6 @@
+/*
+store using timestamp on smart contract
+*/
 exports.jsonInterface = [
 	{
 		"inputs": [
@@ -81,16 +84,6 @@ exports.jsonInterface = [
 				"internalType": "string",
 				"name": "name",
 				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "headings",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "d",
-				"type": "string"
 			}
 		],
 		"name": "putFiles",
@@ -111,18 +104,6 @@ exports.jsonInterface = [
 				"indexed": false,
 				"internalType": "string",
 				"name": "name",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "headings",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "d",
 				"type": "string"
 			}
 		],
@@ -175,24 +156,6 @@ exports.jsonInterface = [
 			},
 			{
 				"internalType": "string",
-				"name": "data",
-				"type": "string"
-			}
-		],
-		"name": "updateFileData",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
 				"name": "name",
 				"type": "string"
 			}
@@ -216,16 +179,6 @@ exports.jsonInterface = [
 					{
 						"internalType": "string",
 						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "headings",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "data",
 						"type": "string"
 					}
 				],
